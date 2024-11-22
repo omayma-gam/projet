@@ -17,16 +17,16 @@ int nombre_des_taches = 0;
 void ajouterunetache() {
     if (nombre_des_taches < MAX_TACHE) {
         printf("Entrer le titre de la tache : ");
-        scanf(" %49s", taches[nombre_des_taches].titre);
+        scanf(" %s", taches[nombre_des_taches].titre);
 
         printf("Entrer la description de la tache : ");
-        scanf(" %99s", taches[nombre_des_taches].description);
+        scanf(" %s", taches[nombre_des_taches].description);
 
         printf("Entrer la date d'échéance (jour/mois/année) : ");
-        scanf(" %14s", taches[nombre_des_taches].date_echeance);
+        scanf(" %s", taches[nombre_des_taches].date_echeance);
 
         printf("Entrer la priorite : ");
-        scanf(" %9s", taches[nombre_des_taches].priorite);
+        scanf(" %s", taches[nombre_des_taches].priorite);
 
         nombre_des_taches++;
 
@@ -56,13 +56,13 @@ void modifiertache() {
         printf("Modification de la tache %d\n", ID + 1);
 
         printf("Entrez la nouvelle description :\n");
-        scanf(" %99s", taches[ID].description);
+        scanf(" %s", taches[ID].description);
 
         printf("Entrez la nouvelle date d'échéance (jour/mois/année) :\n");
-        scanf(" %14s", taches[ID].date_echeance);
+        scanf(" %s", taches[ID].date_echeance);
 
         printf("Entrez la nouvelle priorité (High/Low) :\n");
-        scanf(" %9s", taches[ID].priorite);
+        scanf(" %s", taches[ID].priorite);
 
         printf("Tache ajustée correctement.\n");
     } else {
@@ -90,7 +90,7 @@ void supprimertache() {
 void filtrerparpriorite() {
     char priorite[10];
     printf("Entrez la priorité à filtrer (High/Low) : ");
-    scanf(" %9s", priorite);
+    scanf(" %s", priorite);
 
     printf("Liste des taches avec priorité %s :\n", priorite);
     int trouve = 0;
